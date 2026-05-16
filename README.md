@@ -6,7 +6,7 @@
 
 注册物理 Kubernetes 集群，自动健康检查（心跳+离线判定）
 
-支持为物理集群配置多个环境（fat/uat/prod）对应的 Namespace
+支持为物理集群配置多个环境（dev/test/prod）对应的 Namespace
 
 业务集群（Deployment）管理：创建、扩缩容、编辑资源、删除（软删除）
 
@@ -14,7 +14,7 @@
 
 镜像列表分页、搜索、软删除
 
-自动跟踪镜像在各环境的发布状态（FAT/UAT/PROD）
+自动跟踪镜像在各环境的发布状态（DEV/TEST/PROD）
 
 发布时自动校验前置环境，防止越级发布
 
@@ -30,9 +30,9 @@
 
 轻 → 无审批
 
-中 → 仅生产审批
+中 → 仅PROD审批
 
-重 → UAT 和生产均需审批
+重 → TEST 和PROD均需审批
 
 ### 服务 & 通知配置
 
@@ -94,8 +94,8 @@ kubectl 可访问的 Kubernetes 集群（本地可使用 Docker Desktop）
 克隆代码
 
 ```bash
-git clone https://github.com/your-repo/captain.git
-cd captain/backend
+git clone git@github.com:jybecnu163/deploy-system.git
+cd deploy-system/backend
 ```
 配置数据库
 修改 application.yml 中的 MySQL 连接信息，并执行 docs/schema.sql 创建所有表。
