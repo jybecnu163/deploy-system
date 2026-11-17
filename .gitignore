@@ -3,7 +3,7 @@ backend
 deploy-static-demo
 frontend
 *.zip
-*.js
+gen.js
 ui/
 
 !**/src/main/**/target/
